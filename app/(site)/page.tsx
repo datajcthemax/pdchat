@@ -16,8 +16,8 @@ export default function Home() {
         <div className="sm:mx-auto sm:w-full sm:max-w-md">
             <Image 
                 alt="Logo"
-                height="48"
-                width="28"
+                height="60"
+                width="60"
                 className="mx-auto w-auto "
                 src="/images/logo2.png"
             />
@@ -30,7 +30,7 @@ export default function Home() {
                     tracking-tight
                     text-gray-900
                 ">
-                    회원가입 ㄱㄱ
+                    플레이 데이터 전용 챗 built by Jai
             </h2>
         </div>
         <AuthForm />

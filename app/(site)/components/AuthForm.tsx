@@ -6,9 +6,12 @@ import {
     SubmitHandler, 
     useForm 
 } from "react-hook-form";
+import { BsGithub, BsGoogle } from "react-icons/bs";
+import { RiKaKaoTalkFill, RiKakaoTalkFill } from "react-icons/ri";
 
 import Input from "@/app/components/inputs/Input";
 import Button from "@/app/components/Button";
+import AuthSocialButton from "./AuthSocialButton";
 
 type Varaint = 'LOGIN' | 'REGISTER';
 
@@ -102,9 +105,82 @@ const AuthForm = () => {
                         errors={errors}
                     />
                     <div>
-                        <Button>Test</Button>
+                        <Button
+                            disabled={isLoading}
+                            fullWidth
+                            type="submit"
+                        >
+                            {variant === 'LOGIN' ? '로그인' : '회원가입'}
+                        </Button>
                     </div>
                 </form>
+                <div className="mt-6">
+                        <div className="relative">
+                            <div
+                                className="
+                                    absolute
+                                    inset-0
+                                    flex
+                                    items-center
+                                "
+                            >
+                                <div 
+                                    className="
+                                        w-full 
+                                        border-t
+                                        border-gray-300" 
+                                />
+                            </div>
+                            <div className="
+                                    relative 
+                                    flex 
+                                    justify-center 
+                                    text-sm
+                                "
+                            >
+                                <span className="
+                                        bg-white 
+                                        px-2 
+                                        text-gray-500">
+                                            또는 
+                                </span>
+                            </div>
+                        </div>
+
+                        <div className="mt-6 flex gap-2">
+                            <AuthSocialButton
+                                icon={BsGithub}
+                                onClick={() => socialAction('github')}
+                            />
+                            <AuthSocialButton
+                                icon={BsGoogle}
+                                onClick={() => socialAction('google')}
+                            />
+                            <AuthSocialButton
+                                icon={RiKakaoTalkFill}
+                                onClick={() => socialAction('kakao')}
+                            />
+                        </div>
+                </div>
+                <div className="
+                    flex
+                    gap-2
+                    justify-center
+                    text-sm
+                    mt-6
+                    px-2
+                    text-gray-500
+                ">
+                    <div>
+                        {variant === 'LOGIN' ? '새로오심?' : '전에 온적 있으심?'}
+                    </div>
+                    <div
+                        onClick={toggleVariant}
+                        className="underline cursor-pointer"
+                    >
+                        {variant === 'LOGIN' ? '회원가입 ㄱㄱ' : '로그인 ㄱㄱ'}
+                    </div>
+                </div>
             </div>
         </div>
      );
