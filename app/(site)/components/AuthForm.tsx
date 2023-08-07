@@ -7,11 +7,12 @@ import {
     useForm 
 } from "react-hook-form";
 import { BsGithub, BsGoogle } from "react-icons/bs";
-import { RiKaKaoTalkFill, RiKakaoTalkFill } from "react-icons/ri";
+import { RiKakaoTalkFill } from "react-icons/ri";
 
 import Input from "@/app/components/inputs/Input";
 import Button from "@/app/components/Button";
 import AuthSocialButton from "./AuthSocialButton";
+import axios from "axios";
 
 type Varaint = 'LOGIN' | 'REGISTER';
 
@@ -45,7 +46,7 @@ const AuthForm = () => {
         setIsLoading(true);
 
         if (variant === 'REGISTER') {
-            // Axios Register
+            axios.post('/api/register', data)
         }
 
         if (variant === 'LOGIN') {
