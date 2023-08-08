@@ -63,17 +63,28 @@ const AuthForm = () => {
                     toast.error("회원정보가 틀린데염");
                 }
 
-                if (callback?.ok) {
+                if (callback?.ok && !callback?.error) {
                     toast.success('어서옵쇼!')
                 }
              })
+             .finally(() => setIsLoading(false));
         }
       }
 
       const socialAction = (action: string) => { 
         setIsLoading(true);
 
-        // NextAuth Social Sign In
+        signIn(action, { redirect: false })
+        .then((callback) => { 
+            if (callback?.error) {
+                toast.error('회원정보 틀림요')
+            }
+
+            if (callback?.ok && !callback?.error) {
+                toast.success('어서옵쇼!')
+            }
+         })
+        .finally(() => setIsLoading(false))
        }
 
     return ( 
