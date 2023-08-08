@@ -22,7 +22,7 @@ const EmptyState = () => {
                         text-gray-900
                     "
                 >
-                    select a chat or start a new conversation
+                    떠들어 보세요.
                 </h3>
             </div>
         </div>
