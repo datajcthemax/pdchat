@@ -19,7 +19,7 @@ export default function Home() {
                 height="60"
                 width="60"
                 className="mx-auto w-auto "
-                src="/images/logo2.png"
+                src="/images/logo.png"
             />
             <h2 
                 className="
