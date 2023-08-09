@@ -75,6 +75,17 @@ const MessageBox: React.FC<MessageBoxProps> = ({
                         <div>{data.body}</div>
                     )}
                 </div>
+                {isLast && isOwn && seenList.length > 0 && (
+                    <div
+                        className="
+                            text-xs
+                            font-light
+                            text-gray-500
+                        "
+                    >
+                        {`${seenList}님이 확인함`}
+                    </div>
+                )}
             </div>
         </div>
      );
