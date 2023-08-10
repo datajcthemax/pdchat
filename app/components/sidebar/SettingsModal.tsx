@@ -80,7 +80,7 @@ const SettingsModal: React.FC<SettingsModalProps> = ({
               프로필
             </h2>
             <p className="mt-1 text-sm leading-6 text-gray-600">
-              자기소개
+              이름이나 프사 변경 여기서 하던지 말던지
             </p>
 
             <div className="mt-10 flex flex-col gap-y-8">
