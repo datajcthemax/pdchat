@@ -112,7 +112,7 @@ const Modal: React.FC<ModalProps> = ({
                                     >
                                         <span className="sr-only">닫기</span>
                                         <IoClose 
-                                            clssName="
+                                            className="
                                             h-6
                                             w-6
                                             "
