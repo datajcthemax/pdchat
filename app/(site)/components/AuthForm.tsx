@@ -59,7 +59,7 @@ const AuthForm = () => {
         if (variant === 'REGISTER') {
             axios.post('/api/register', data)
             .then(() => signIn('credentials', data))
-            .catch(() =>  toast.error('뭔가 심상치 않은 일이 생긴거야!'))
+            .catch(() =>  toast.error('Something went wrong'))
             .finally(() => setIsLoading(false))
         }
 
@@ -70,11 +70,11 @@ const AuthForm = () => {
             })
             .then((callback) => { 
                 if (callback?.error) {
-                    toast.error("회원정보가 틀린데염");
+                    toast.error("Invalid User Credentials");
                 }
 
                 if (callback?.ok && !callback?.error) {
-                    toast.success('어서옵쇼!');
+                    toast.success('Welcome to Pdchat!');
                     router.push("/users");
                 }
              })
@@ -88,11 +88,11 @@ const AuthForm = () => {
         signIn(action, { redirect: false })
         .then((callback) => { 
             if (callback?.error) {
-                toast.error('회원정보 틀림요')
+                toast.error('Invalid User Credentials')
             }
 
             if (callback?.ok && !callback?.error) {
-                toast.success('어서옵쇼!')
+                toast.success('Welcome to Pdchat!')
             }
          })
         .finally(() => setIsLoading(false))
@@ -184,7 +184,7 @@ const AuthForm = () => {
                                         bg-white 
                                         px-2 
                                         text-gray-500">
-                                            또는 
+                                            or
                                 </span>
                             </div>
                         </div>
@@ -210,13 +210,13 @@ const AuthForm = () => {
                     text-gray-500
                 ">
                     <div>
-                        {variant === 'LOGIN' ? '새로오심?' : '전에 온적 있으심?'}
+                        {variant === 'LOGIN' ? 'New to pdchat?' : 'Already have an account?'}
                     </div>
                     <div
                         onClick={toggleVariant}
                         className="underline cursor-pointer"
                     >
-                        {variant === 'LOGIN' ? '회원가입 ㄱㄱ' : '로그인 ㄱㄱ'}
+                        {variant === 'LOGIN' ? 'Register a new account' : 'Login'}
                     </div>
                 </div>
             </div>

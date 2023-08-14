@@ -92,7 +92,7 @@ const MessageBox: React.FC<MessageBoxProps> = ({
                             text-gray-500
                         "
                     >
-                        {`${seenList}님이 확인함`}
+                        {`${seenList} seen `}
                     </div>
                 )}
             </div>

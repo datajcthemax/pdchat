@@ -15,7 +15,7 @@ export async function POST(
         } = body;
 
         if (!email || !name || !password) {
-            return new NextResponse('입력 ㄱ', { status: 400 });
+            return new NextResponse('Enter your email', { status: 400 });
         }
 
         const hashedPassword = await bcrypt.hash(password, 12);

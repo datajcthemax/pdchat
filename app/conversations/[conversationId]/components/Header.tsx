@@ -30,7 +30,7 @@ const Header: React.FC<HeaderProps> = ({ conversation }) => {
       return `${conversation.users.length} members`;
     }
 
-    return isActive ?  "활동중" : "오프라인";
+    return isActive ?  "Active" : "Offline";
   }, [conversation, isActive]);
 
   return (

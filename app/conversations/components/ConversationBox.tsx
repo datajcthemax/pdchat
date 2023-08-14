@@ -55,14 +55,14 @@ const ConversationBox: React.FC<ConversationBoxProps> = ({
 
   const lastMessageText = useMemo(() => {
     if (lastMessage?.image) {
-      return "이미지 보냄";
+      return "Image sent";
     }
 
     if (lastMessage?.body) {
       return lastMessage.body;
     }
 
-    return "대화시작";
+    return "start a new chat";
   }, [lastMessage]);
 
   return (

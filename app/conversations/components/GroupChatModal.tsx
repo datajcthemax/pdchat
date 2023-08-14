@@ -58,7 +58,7 @@ const GroupChatModal: React.FC<GroupChatModalProps> = ({
       router.refresh();
       onClose();
     })
-    .catch(() => toast.error('처리안됨!'))
+    .catch(() => toast.error('something went wrong'))
     .finally(() => setIsLoading(false));
   }
 
@@ -75,15 +75,15 @@ const GroupChatModal: React.FC<GroupChatModalProps> = ({
                 text-gray-900
               "
               >
-                파티원 모집
+                Start a group chat!
               </h2>
             <p className="mt-1 text-sm leading-6 text-gray-600">
-              레츠 파뤼~!
+              Add members to the group chat.
             </p>
             <div className="mt-10 flex flex-col gap-y-8">
               <Input
                 disabled={isLoading}
-                label="이름" 
+                label="Name" 
                 id="name" 
                 errors={errors} 
                 required 
@@ -91,7 +91,7 @@ const GroupChatModal: React.FC<GroupChatModalProps> = ({
               />
               <Select
                 disabled={isLoading}
-                label="파티원들" 
+                label="Members" 
                 options={users.map((user) => ({ 
                   value: user.id, 
                   label: user.name 
@@ -111,10 +111,10 @@ const GroupChatModal: React.FC<GroupChatModalProps> = ({
             type="button"
             secondary
           >
-            취소
+            Cancel
           </Button>
           <Button disabled={isLoading} type="submit">
-            가즈아~
+            Create
           </Button>
         </div>
       </form>

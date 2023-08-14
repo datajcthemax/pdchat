@@ -66,7 +66,7 @@ const Form = () => {
           register={register}
           errors={errors}
           required
-          placeholder="아무말 ㄱㄱ"
+          placeholder="Try typing something!"
         />
         <button
           type="submit"

@@ -5,7 +5,7 @@ import ToasterContext from './context/ToasterContext'
 
 export const metadata = {
   title: 'PD Chat',
-  description: '플레이데이터 전용챗',
+  description: 'Real time chat application for playdata',
 }
 
 export default function RootLayout({

@@ -30,7 +30,7 @@ export default function Home() {
                     tracking-tight
                     text-gray-900
                 ">
-                    플레이 데이터 전용 챗 built by Jai
+                    Chat for Playdata
             </h2>
         </div>
         <AuthForm />

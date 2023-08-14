@@ -119,7 +119,7 @@ const ConversationList: React.FC<ConversationListProps> = ({
                                 text-neutral-800
                             "
                         >
-                            메세지
+                            Message
                         </div>
                         <div 
                             onClick={() => setIsModalOpen(true)}

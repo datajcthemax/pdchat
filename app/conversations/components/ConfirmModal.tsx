@@ -32,7 +32,7 @@ const ConfirmModal: React.FC<ConfirmModalProps> = ({
       router.push('/conversations');
       router.refresh();
     })
-    .catch(() => toast.error('처리 안됨!'))
+    .catch(() => toast.error('Something went wrong'))
     .finally(() => setIsLoading(false))
   }, [router, conversationId, onClose]);
 
@@ -73,11 +73,11 @@ const ConfirmModal: React.FC<ConfirmModalProps> = ({
             as="h3" 
             className="text-base font-semibold leading-6 text-gray-900"
           >
-            대화 삭제
+            Delete
           </Dialog.Title>
           <div className="mt-2">
             <p className="text-sm text-gray-500">
-                대화 삭제 확실함요? 한번 지우면 대화 내용 다 날아감.
+                Are you sure? You can't get your messages back once you delete them.
             </p>
           </div>
         </div>
@@ -88,14 +88,14 @@ const ConfirmModal: React.FC<ConfirmModalProps> = ({
           danger
           onClick={onDelete}
         >
-          삭제
+          Delete
         </Button>
         <Button
           disabled={isLoading}
           secondary
           onClick={onClose}
         >
-          취소
+          Cancel
         </Button>
       </div>
     </Modal>

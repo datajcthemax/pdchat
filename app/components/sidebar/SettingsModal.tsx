@@ -58,7 +58,7 @@ const SettingsModal: React.FC<SettingsModalProps> = ({
       router.refresh();
       onClose();
     })
-    .catch(() => toast.error('처리 안됨'))
+    .catch(() => toast.error('Something went wrong'))
     .finally(() => setIsLoading(false));
   }
 
@@ -75,16 +75,16 @@ const SettingsModal: React.FC<SettingsModalProps> = ({
                 text-gray-900
               "
             >
-              프로필
+              Profile
             </h2>
             <p className="mt-1 text-sm leading-6 text-gray-600">
-              이름이나 프사 변경 여기서 하던지 말던지
+              Change your name or profile picture here!
             </p>
 
             <div className="mt-10 flex flex-col gap-y-8">
               <Input
                 disabled={isLoading}
-                label="이름" 
+                label="Name" 
                 id="name" 
                 errors={errors} 
                 required 
@@ -101,7 +101,7 @@ const SettingsModal: React.FC<SettingsModalProps> = ({
                     text-gray-900
                   "
                 >
-                  프사
+                  Profile Picture
                 </label>
                 <div className="mt-2 flex items-center gap-x-3">
                   <Image
@@ -121,7 +121,7 @@ const SettingsModal: React.FC<SettingsModalProps> = ({
                       secondary
                       type="button"
                     >
-                      프사 변경
+                      Change Profile
                     </Button>
                   </CldUploadButton>
                 </div>
@@ -144,13 +144,13 @@ const SettingsModal: React.FC<SettingsModalProps> = ({
             secondary 
             onClick={onClose}
           >
-            취소
+            Cancel
           </Button>
           <Button 
             disabled={isLoading}
             type="submit"
           >
-            저장
+            Save
           </Button>
         </div>
       </form>

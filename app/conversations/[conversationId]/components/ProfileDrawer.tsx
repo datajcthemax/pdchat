@@ -42,7 +42,7 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({
             return `${data.users.length} members`;
         }
 
-        return isActive ? '활동중' : '오프라인';
+        return isActive ? 'Active' : 'Offline';
      }, [data, isActive]);
 
     return (
@@ -214,7 +214,7 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({
                                                             {data.isGroup && (
                                                                 <div>
                                                                     <dt className="text-sm font-medium text-gray-500 sm:w-40 sm:flex-shrink-0">
-                                                                        이메일
+                                                                        Email
                                                                     </dt>
                                                                     <dd className="mt-1 text-sm text-gray-900 sm:col-span-2">
                                                                         {data.users.map((user) => user.email).join(', ')}
@@ -232,7 +232,7 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({
                                                                             sm:flex-shrink-0
                                                                         "
                                                                     >
-                                                                        이메일
+                                                                        Email
                                                                     </dt>
                                                                     <dd
                                                                         className="
@@ -259,7 +259,7 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({
                                                                                 sm:flex-shrink-0
                                                                             "
                                                                         >
-                                                                            쪼인한날
+                                                                            Joined since
                                                                         </dt>
                                                                         <dd
                                                                             className="

@@ -32,7 +32,7 @@ export const authOptions: AuthOptions = {
       },
       async authorize(credentials) {
         if (!credentials?.email || !credentials?.password) {
-          throw new Error('이메일이랑 비번 다시 확인 ㄱ');
+          throw new Error('Check your email');
         }
 
         const user = await prisma.user.findUnique({
@@ -42,7 +42,7 @@ export const authOptions: AuthOptions = {
         });
 
         if (!user || !user?.hashedPassword) {
-          throw new Error('회원가입 하심?');
+          throw new Error('Do you have an account?');
         }
 
         const isCorrectPassword = await bcrypt.compare(
@@ -51,7 +51,7 @@ export const authOptions: AuthOptions = {
         );
 
         if (!isCorrectPassword) {
-          throw new Error('비번 틀림요');
+          throw new Error('wrong password');
         }
 
         return user;
