@@ -40,3 +40,11 @@ Cloudinary를 이용한 사진 전송
 ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=Vercel&logoColor=white)
 
 ---
+
+<br>
+
+## 파이널 프로젝트
+Docker, Next, MongoDB를 이용해서 디자인을 간소화 하고 기능과 속도에 더 중점을 두고 개발해 보고싶음. 
+
+Airbnb나 한국에 Spacecloud같은 공간 대여 앱을 만들고 실제 고객상대로 프로덕션까지 해보는게 목표. 
+
